@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20)
+project(we17301_vong_lap_while C)
+
+set(CMAKE_C_STANDARD 99)
+
+add_executable(we17301_vong_lap_while main.c)
