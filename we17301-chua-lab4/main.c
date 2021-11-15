@@ -4,7 +4,7 @@
 int main() {
     int answer;
     bool is_continue = true;
-    int min, max, tongb1, demb1;
+    int min, max, tongb1 = 0, demb1 = 0, inputb2;
     float trungbinhb1;
 
     do {
@@ -37,6 +37,22 @@ int main() {
                 printf("Trung binh cua cac so chan = %f\n", trungbinhb1);
                 break;
             case 2:
+                printf("Bai 2\n");
+                printf("Nhap so cua ban:");
+                scanf("%d", &inputb2);
+                int b2Loop = 2;
+                int count = 0;
+                while (b2Loop < inputb2){
+                    if(inputb2%b2Loop == 0){
+                        count++;
+                    }
+                    b2Loop++;
+                }
+                if(count > 0){
+                    printf("so vua nhap khong phai so nguyen to\n");
+                }else{
+                    printf("so vua nhap la so nguyen to\n");
+                }
                 break;
             case 3:
                 break;
