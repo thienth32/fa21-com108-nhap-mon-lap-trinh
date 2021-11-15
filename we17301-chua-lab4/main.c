@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
 
 int main() {
     int answer;
     bool is_continue = true;
-    int min, max, tongb1 = 0, demb1 = 0, inputb2;
+    int min, max, tongb1 = 0, demb1 = 0, inputb2, inputb3;
     float trungbinhb1;
 
     do {
@@ -55,6 +56,21 @@ int main() {
                 }
                 break;
             case 3:
+                printf("Bai 3\n");
+                printf("Nhap so x:");
+                scanf("%d", &inputb3);
+                int i = 1;
+                while (i < inputb3){
+                    if(i == sqrt(inputb3)){
+                        break;
+                    }
+                    i++;
+                }
+                if(i < inputb3){
+                    printf("%d la so chinh phuong\n", inputb3);
+                }else{
+                    printf("%d khong phai so chinh phuong\n", inputb3);
+                }
                 break;
         }
 
