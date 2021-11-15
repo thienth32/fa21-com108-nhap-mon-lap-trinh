@@ -14,7 +14,7 @@ int main() {
         printf("2. Bai 2\n");
         printf("3. Bai 3\n");
         printf("4. Thoat\n");
-        printf("Lua chon cua ba:");
+        printf("Lua chon cua ban:");
         scanf("%d", &answer);
         switch (answer) {
             case 4:
@@ -27,27 +27,24 @@ int main() {
                 printf("Nhap so max:");
                 scanf("%d", &max);
 
-                while (min <= max){
-                    if(min%2==0){
-                        tongb1 += min;
+                for (int i = min; i < max; i++) {
+                    if(i%2==0){
+                        tongb1 = tongb1 + min;
                         demb1++;
                     }
-                    min++;
                 }
                 trungbinhb1 = tongb1/demb1;
-                printf("Trung binh cua cac so chan = %f\n", trungbinhb1);
+                printf("Trung binh cua cac so chan trong khoang %d => %d = %f\n", min, max, trungbinhb1);
                 break;
             case 2:
                 printf("Bai 2\n");
                 printf("Nhap so cua ban:");
                 scanf("%d", &inputb2);
-                int b2Loop = 2;
                 int count = 0;
-                while (b2Loop < inputb2){
-                    if(inputb2%b2Loop == 0){
+                for (int i = 2; i < inputb2; i++) {
+                    if(inputb2%i == 0){
                         count++;
                     }
-                    b2Loop++;
                 }
                 if(count > 0){
                     printf("so vua nhap khong phai so nguyen to\n");
@@ -59,14 +56,14 @@ int main() {
                 printf("Bai 3\n");
                 printf("Nhap so x:");
                 scanf("%d", &inputb3);
-                int i = 1;
-                while (i < inputb3){
+                bool flag = false;
+                for (int i = 1; i < inputb3; i++) {
                     if(i == sqrt(inputb3)){
+                        flag = true;
                         break;
                     }
-                    i++;
                 }
-                if(i < inputb3){
+                if(flag == true){
                     printf("%d la so chinh phuong\n", inputb3);
                 }else{
                     printf("%d khong phai so chinh phuong\n", inputb3);
