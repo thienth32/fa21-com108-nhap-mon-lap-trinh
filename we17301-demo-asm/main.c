@@ -3,21 +3,19 @@
 #include <math.h>
 
 bool kt_nguyen_to(x){
-    bool result = false;
+    bool result = true;
     for (int i = 2; i < x; i) {
         if(x%i == 0){
-            result = true;
+            result = false;
             break;
         }
     }
     return result;
 }
-
 bool kt_chinh_phuong(x){
     int can_b2 = (int) sqrt(x);
     return (int) pow(can_b2, 2) == x;
 }
-
 int chon_cau_hoi(){
     int answer;
     printf("Bai 1:\n");
@@ -30,8 +28,6 @@ int chon_cau_hoi(){
     scanf("%d", &answer);
     return answer;
 }
-
-
 void bai1(){
     printf("nhap so x:");
     int x;
@@ -48,7 +44,26 @@ void bai1(){
         printf("x: %d khong phai la so chinh phuong\n", x);
     }
 }
+void bai2(){
+    printf("bai 2\n");
+}
 int main() {
-    chon_cau_hoi();
+    int lua_chon;
+    int tiep_tuc;
+    do {
+        lua_chon = chon_cau_hoi();
+        switch (lua_chon) {
+            case 1:
+                bai1();
+                break;
+            case 2:
+                bai2();
+                break;
+        }
+        printf("Ban co muon tiep tuc choi hay khong (0 - Thoat | 1 - tiep tuc)?");
+
+        scanf("%d", &tiep_tuc);
+    } while (tiep_tuc == 1);
+
     return 0;
 }
