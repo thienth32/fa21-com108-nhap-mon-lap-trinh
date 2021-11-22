@@ -61,7 +61,6 @@ int main() {
                 break;
         }
         printf("Ban co muon tiep tuc choi hay khong (0 - Thoat | 1 - tiep tuc)?");
-
         scanf("%d", &tiep_tuc);
     } while (tiep_tuc == 1);
 
