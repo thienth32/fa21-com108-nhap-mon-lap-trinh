@@ -3,7 +3,7 @@
 
 int main() {
     // nhập số lượng sinh viên
-
+    getline();
     int syso;
     printf("Nhap so luong sinh vien:");
     scanf("%d", &syso);
